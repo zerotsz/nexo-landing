@@ -1,0 +1,127 @@
+<!--
+  PLANTILLA DE EMAILJS: AUTORRESPUESTA AL CLIENTE
+  Pegue este HTML en EmailJS > Email Templates > (su plantilla) > Content > "Edit Content" > "Code Editor".
+  Configuración de la plantilla:
+    To Email : {{to_email}}
+    From Name: NEXO Inventario
+    Reply To : {{contacto_email}}   (o su correo real)
+    Subject  : Gracias por contactar a NEXO Inventario, {{to_name}}
+  Variables que envía la landing: to_name, to_email, empresa, cargo, telefono, pais, mensaje,
+  folleto, tipo, logo_url, demo_url, web_url, contacto_email, contacto_telefono, fecha.
+  El logo y las imágenes deben ser URL públicas (PNG): se cargan desde {{web_url}} = su landing ya publicada
+  (public/logo-email.png y public/email/*.png). En local (localhost) no se verán en el correo recibido.
+-->
+<div style="margin:0;padding:0;background:#0b0716;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b0716;padding:24px 12px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#151028;border:1px solid #3b2d6d;border-radius:16px;overflow:hidden;font-family:Arial,Helvetica,sans-serif;color:#efeaff;">
+
+          <!-- Encabezado con logo -->
+          <tr>
+            <td align="center" style="padding:28px 24px 18px;background:#100a20;border-bottom:3px solid #8b5cf6;">
+              <img src="{{logo_url}}" alt="NEXO Inventario" width="200" style="display:block;border:0;max-width:200px;height:auto;">
+            </td>
+          </tr>
+
+          <!-- Mensaje principal -->
+          <tr>
+            <td style="padding:32px 32px 8px;">
+              <p style="margin:0 0 8px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b26bff;font-weight:bold;">Sistema de inventario y Kardex</p>
+              <h1 style="margin:0 0 14px;font-size:26px;line-height:1.25;color:#ffffff;">Hola {{to_name}}, gracias por escribirnos</h1>
+              <p style="margin:0 0 12px;font-size:15px;line-height:1.6;color:#cfc4ee;">
+                Recibimos su solicitud de <strong style="color:#ffffff;">{{empresa}}</strong> y un especialista de NEXO se pondrá en contacto con usted muy pronto.
+              </p>
+              <p style="margin:0;font-size:15px;line-height:1.6;color:#cfc4ee;">
+                NEXO integra productos, proveedores, Kardex y usuarios en un solo panel, con stock en tiempo real, alertas de reposición y acceso por roles. Para que ordene su inventario, controle sus movimientos y crezca sin perder el control.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Imagen principal del producto -->
+          <tr>
+            <td style="padding:20px 32px 0;">
+              <img src="{{web_url}}/email/hero.png" alt="NEXO Inventario: almacén ordenado" width="536" style="display:block;border:0;width:100%;max-width:536px;height:auto;border-radius:12px;">
+            </td>
+          </tr>
+
+          <!-- Capacidades con imágenes (2 por fila) -->
+          <tr>
+            <td style="padding:24px 32px 0;">
+              <h2 style="margin:0 0 14px;font-size:18px;color:#ffffff;">Así se ve NEXO</h2>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="50%" valign="top" style="padding:0 6px 14px 0;">
+                    <img src="{{web_url}}/email/parametrizacion.png" alt="Parámetros del sistema" width="250" style="display:block;border:0;width:100%;height:auto;border-radius:10px;">
+                    <p style="margin:8px 0 0;font-size:13px;color:#cfc4ee;"><strong style="color:#ffffff;">Alta parametrización</strong><br>Stock mínimo, alertas y reglas a su medida.</p>
+                  </td>
+                  <td width="50%" valign="top" style="padding:0 0 14px 6px;">
+                    <img src="{{web_url}}/email/integracion.png" alt="Integración con ERP" width="250" style="display:block;border:0;width:100%;height:auto;border-radius:10px;">
+                    <p style="margin:8px 0 0;font-size:13px;color:#cfc4ee;"><strong style="color:#ffffff;">Integración con su ERP</strong><br>API REST para conectar sus sistemas.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" valign="top" style="padding:0 6px 0 0;">
+                    <img src="{{web_url}}/email/automatizacion.png" alt="Automatización de procesos" width="250" style="display:block;border:0;width:100%;height:auto;border-radius:10px;">
+                    <p style="margin:8px 0 0;font-size:13px;color:#cfc4ee;"><strong style="color:#ffffff;">Automatización</strong><br>Stock y alertas que se actualizan solos.</p>
+                  </td>
+                  <td width="50%" valign="top" style="padding:0 0 0 6px;">
+                    <img src="{{web_url}}/email/canales.png" alt="Un solo stock para varios canales" width="250" style="display:block;border:0;width:100%;height:auto;border-radius:10px;">
+                    <p style="margin:8px 0 0;font-size:13px;color:#cfc4ee;"><strong style="color:#ffffff;">Varios canales</strong><br>Un solo stock para mostrador y tienda web.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Servicios -->
+          <tr>
+            <td style="padding:24px 32px 4px;">
+              <h2 style="margin:0 0 14px;font-size:18px;color:#ffffff;">Lo que ofrecemos</h2>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Inventario y Kardex en tiempo real</strong><br><span style="color:#a99dca;font-size:14px;">El stock cambia con cada entrada, salida y ajuste, con historial completo.</span></td></tr>
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Productos, categorías y proveedores</strong><br><span style="color:#a99dca;font-size:14px;">Catálogo ordenado, con stock mínimo y alertas de reposición.</span></td></tr>
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Usuarios y permisos por rol</strong><br><span style="color:#a99dca;font-size:14px;">Administrador, Almacenero y Supervisor, cada uno con sus accesos.</span></td></tr>
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Seguridad y respaldo</strong><br><span style="color:#a99dca;font-size:14px;">Contraseñas cifradas, sesión protegida y datos respaldados en la nube.</span></td></tr>
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Implementación y soporte</strong><br><span style="color:#a99dca;font-size:14px;">Carga inicial de datos, capacitación del equipo y acompañamiento.</span></td></tr>
+                <tr><td style="padding:10px 0;border-top:1px solid #2d2352;"><strong style="color:#ffffff;font-size:15px;">&#9632; Integración por API</strong><br><span style="color:#a99dca;font-size:14px;">Conexión con su ERP, contabilidad o tienda en línea.</span></td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Llamado a la acción -->
+          <tr>
+            <td align="center" style="padding:26px 32px 8px;">
+              <p style="margin:0 0 16px;font-size:15px;color:#cfc4ee;">Mientras tanto, pruebe el sistema con datos de ejemplo:</p>
+              <a href="{{demo_url}}" style="display:inline-block;background:#8b5cf6;background-image:linear-gradient(135deg,#7c3aed,#e879f9);color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:10px;">Probar demo gratis</a>
+            </td>
+          </tr>
+
+          <!-- Resumen de su solicitud -->
+          <tr>
+            <td style="padding:26px 32px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#100a20;border:1px solid #2d2352;border-radius:12px;">
+                <tr><td style="padding:16px 18px;font-size:13px;line-height:1.7;color:#a99dca;">
+                  <strong style="color:#ffffff;">Resumen de su solicitud</strong><br>
+                  Cargo: {{cargo}} &middot; País: {{pais}}<br>
+                  Folleto solicitado: {{folleto}}<br>
+                  Mensaje: {{mensaje}}
+                </td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Pie -->
+          <tr>
+            <td align="center" style="padding:26px 32px 30px;font-size:12.5px;line-height:1.7;color:#8a7eb0;">
+              <a href="{{web_url}}" style="color:#b26bff;text-decoration:none;">{{web_url}}</a><br>
+              {{contacto_email}} {{contacto_telefono}}<br>
+              Enviado el {{fecha}}<br>
+              &copy; 2026 NEXO Inventario. Todos los derechos reservados.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
